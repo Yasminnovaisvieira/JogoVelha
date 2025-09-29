@@ -1,14 +1,9 @@
-// Estados dos botões
-// import { useState } from "react";
+import "../styles/style.css";
 
-function Quadrado ({value, onQuadrado}) {
-    // Função para verificar se o usuário clicou
-    // function handleClick(){
-    //     setValue("X")      
-    // }
+function Quadrado ({value, onQuadrado, venceu}) {
 
     return (
-        <button className="quadrado" onClick={onQuadrado}>
+        <button className="quadrado" onClick={onQuadrado} disabled={(value !== null) || (!!venceu)} >
             {value}
         </button>
     )  
